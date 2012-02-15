@@ -74,7 +74,7 @@ static NSString *PseudoRandomColor(const char *key, uint8_t max)
             if ([classNames containsObject:ivar.parsedType.typeName.name]) {
                 [referencedClassNames addObject:class.name];
                 NSString *key = [NSString stringWithFormat:@"%@:%u", class.name, ivar.offset];
-                [digraph appendFormat:@"%@ -> %@ [ color = \"%@\" ]\n", key, ivar.parsedType.typeName.name, PseudoRandomColor([key UTF8String], 200)];
+                [digraph appendFormat:@"%@ -> %@ [ color = \"%@\" ]\n", key, ivar.parsedType.typeName.name, PseudoRandomColor([ivar.parsedType.typeName.name UTF8String], 200)];
             }
         }
     }
