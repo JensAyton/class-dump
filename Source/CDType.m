@@ -184,7 +184,7 @@ static BOOL debugMerge = NO;
     return self;
 }
 
-- (void)setUnderlyingType:(int)aWidth;
+- (void)setUnderlyingType:(NSUInteger)aWidth;
 {
     assert(type == 'b');
     widthOfUnderlyingType = aWidth;
